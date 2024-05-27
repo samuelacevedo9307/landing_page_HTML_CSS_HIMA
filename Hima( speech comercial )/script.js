@@ -68,6 +68,7 @@ $registrarse.onclick = () => {
                   <h3 class="modalRegister_tittle">Registra tus datos</h3>
                   <span class="close" id="close">&times;</span>
                   <form method="POST"class="modal_register_form">
+                  <input type="text" placeholder="Ingrese nombre de usuario" class="modalLogin_input"></input>
                     <input type="email" placeholder="Ingrese su correo" class="modalLogin_input"></input>
                     <input type="text" placeholder="Ingrese la contraseña" class="modalLogin_input"></input>
                     <h4 class="select_profile">Seleccione su perfil:</h4>
