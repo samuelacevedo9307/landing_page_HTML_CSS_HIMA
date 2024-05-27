@@ -42,22 +42,21 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     background-color: var(--blue-);
-    padding: 10px;
+    padding: 10px 30px;
     font-size: 15px;
 }
 
 .navLogo {
-    min-width: 100px;
-    max-width: 101px;
-    height: 44px;
+
+    height: 60px;
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
 .navLogo img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 
 .navMenu {
@@ -85,6 +84,7 @@ nav {
     border-radius: 5px;
     background-color: var(--beige-);
     color: var(--blue-);
+    font-weight: bold;
 }
 
 .menuToggle {
@@ -280,7 +280,7 @@ nav {
 }
 
 .section_dashHero {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     display: flex;
 }
@@ -296,12 +296,12 @@ nav {
     align-items: center;
     gap: 30px;
     height: 100%;
-    width: 70%;
+    width: 80%;
     padding: 30px;
 }
 
 .menu_dashHero {
-    width: 30%;
+    width: 20%;
     height: 100%;
     text-align: center;
     display: flex;
@@ -311,13 +311,13 @@ nav {
 }
 
 .menu_dashHero h2 {
-    color: var(--beige-);
+    color: var(--white-);
     font-family: var(--font-family-title);
 }
 
 .table_one_hero,
 .table_two_hero {
-    width: 80%;
+    width: 60%;
     height: 50%;
     border-radius: 20px;
     background-image: url(./img/Imagen1.png);
@@ -328,20 +328,22 @@ nav {
 
 .mainDestinations {
     min-height: 100vh;
-    margin-top: 40px;
+
 }
 
 .mainDestinations h1 {
     text-align: center;
     font-size: 2.5rem;
-    color: #254453;
-    margin-bottom: 3%;
+    background-color: var(--blue-);
+    color: var(--white-);
+    padding: 2%;
 }
 
 /*input de busqueda */
 .mainDestinations #searchBar {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #searchBar #inputUser {
@@ -349,8 +351,7 @@ nav {
     width: 40%;
     border-radius: 5px;
     text-align: center;
-    margin-right: 1%;
-    margin-bottom: 2rem;
+    margin: 1.5rem;
     padding: 0.9%;
     border: solid 0px;
     box-shadow: 2px 2px 2px 0px;
@@ -374,8 +375,10 @@ nav {
     text-align: start;
     font-family: "Roboto", sans-serif;
     box-shadow: 0px 2px 2px 0px;
-    margin-bottom: 2rem;
-    padding: 1rem;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #searchBar #arrow {
@@ -395,11 +398,13 @@ nav {
     grid-template-columns: 32% 32% 16% 16%;
     grid-auto-rows: 70px;
     gap: 1rem;
-    padding: 20;
+    padding: 30px;
+    height: 100vh;
+    width: 100vw;
 }
 
 #places a {
-    background: linear-gradient(to right, #25445390, #25445390);
+    background: linear-gradient(to right, #25445390, #25445390), url(./img/towe_eifel\ \(1\).jpg);
     background-size: cover;
     background-position: center;
     display: flex;
