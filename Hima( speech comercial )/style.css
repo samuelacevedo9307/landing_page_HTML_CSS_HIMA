@@ -30,7 +30,7 @@ html {
     --font-weight-medium-text-: 500;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
@@ -42,6 +42,8 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     background-color: var(--blue-);
+    padding: 10px;
+    font-size: 15px;
 }
 
 .navLogo {
@@ -159,6 +161,7 @@ nav {
     cursor: pointer;
     border-radius: 5px;
     font-size: medium;
+    font-weight: bold;
 }
 
 /*Modal Login*/
@@ -254,7 +257,7 @@ nav {
 
 }
 
-.select_profile{
+.select_profile {
     padding-top: 20px;
     font-weight: 400;
     color: var(--white-);
@@ -271,16 +274,21 @@ nav {
 
 
 /* Dashboard */
+
+.section_dashboard_admin {
+    display: block;
+}
+
 .section_dashHero {
     height: 100vh;
     width: 100%;
     display: flex;
-  }
-  
- .menu_dashHero {
+}
+
+.menu_dashHero {
     background-color: var(--blue-);
- }
-  
+}
+
 .place_dashHero {
     display: flex;
     flex-direction: column;
@@ -290,9 +298,9 @@ nav {
     height: 100%;
     width: 70%;
     padding: 30px;
-  }
-  
-  .menu_dashHero {
+}
+
+.menu_dashHero {
     width: 30%;
     height: 100%;
     text-align: center;
@@ -300,28 +308,30 @@ nav {
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-  }
-  
-  .menu_dashHero h2 {
+}
+
+.menu_dashHero h2 {
     color: var(--beige-);
     font-family: var(--font-family-title);
-  }
-  
-  .table_one_hero,
-  .table_two_hero {
+}
+
+.table_one_hero,
+.table_two_hero {
     width: 80%;
     height: 50%;
     border-radius: 20px;
+    background-image: url(./img/Imagen1.png);
+    background-size: cover;
 }
 
 /*Diseño del titulo y la barra de busqueda */
 
-.mainDestinations{
+.mainDestinations {
     min-height: 100vh;
     margin-top: 40px;
 }
 
-.mainDestinations h1{
+.mainDestinations h1 {
     text-align: center;
     font-size: 2.5rem;
     color: #254453;
@@ -329,12 +339,12 @@ nav {
 }
 
 /*input de busqueda */
-.mainDestinations #searchBar{
+.mainDestinations #searchBar {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
-#searchBar #inputUser{
+#searchBar #inputUser {
     background-color: #FFF8DC;
     width: 40%;
     border-radius: 5px;
@@ -347,16 +357,16 @@ nav {
     outline: none;
 }
 
- ::placeholder{
+::placeholder {
     font-size: 1rem;
     font-style: italic;
     color: #183543;
-} 
+}
 
 
 
 /* boton de buscar*/
-#searchWhitInputUser{
+#searchWhitInputUser {
     background-color: #254453;
     color: #FFF8DC;
     border-radius: 5px;
@@ -368,7 +378,7 @@ nav {
     padding: 1rem;
 }
 
-#searchBar #arrow{
+#searchBar #arrow {
     position: relative;
     right: 3%;
     bottom: -0.6rem;
@@ -379,7 +389,7 @@ nav {
 /*Diseño y estructuracion del collage de destinos en "Principales destinos" */
 /*Maquetacion con grid */
 
-#places{
+#places {
     display: grid;
     justify-content: center;
     grid-template-columns: 32% 32% 16% 16%;
@@ -388,7 +398,7 @@ nav {
     padding: 20;
 }
 
-#places a{
+#places a {
     background: linear-gradient(to right, #25445390, #25445390);
     background-size: cover;
     background-position: center;
@@ -399,51 +409,51 @@ nav {
     border-radius: 10px;
 }
 
-#places h2{
+#places h2 {
     color: #FFF8DC;
     font-size: 200%;
     margin-left: 3%;
-    
+
 }
 
-#places a:hover{
+#places a:hover {
     color: #FFF8DC;
     box-shadow: 0px 0px 5px 3px #254453;
 }
 
-#places #c_1{
+#places #c_1 {
     grid-row: 1/7;
 }
 
-#places #c_2{
+#places #c_2 {
     grid-row: 1/4;
 }
 
-#places #c_3{
+#places #c_3 {
     grid-row: 1/4;
     grid-column: 3/5;
 }
 
-#places #c_4{
+#places #c_4 {
     grid-row: 4/7;
 }
 
-#places #c_5{
+#places #c_5 {
     grid-column: 3/4;
-    grid-row: 4/7 ;
+    grid-row: 4/7;
 }
 
-#places #c_6{
+#places #c_6 {
     grid-column: 4/5;
     grid-row: 4/7;
 }
 
-#places #c_7{
+#places #c_7 {
     grid-row: 7/10;
     grid-column: 1/5;
 }
 
-#c_7 h2{
+#c_7 h2 {
     margin-left: 1%;
     margin-bottom: 0;
 }
@@ -473,7 +483,7 @@ nav {
     width: 90%;
     padding: 70px 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     text-align: center;
     gap: 2rem;
 }
@@ -483,7 +493,7 @@ nav {
     border-radius: 16px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     cursor: pointer;
     position: relative;
     padding: 10px;
@@ -496,14 +506,16 @@ nav {
 .cards_highlights img {
     width: 100%;
     border-radius: 16px;
+
 }
 
 .about_travel {
-    width: 100%;
+    width: 70%;
+    margin: 30px 0px;
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    align-items: center;
+    justify-content: flex-start;
+
+    align-items: flex-start;
     padding: 10px;
     gap: 10px;
 }
@@ -521,12 +533,15 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 200%;
+    border-radius: 70px;
     background-color: #254453;
     color: #000088;
     font-weight: bold;
-    width: 130px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
 }
 
 .button_price p {
@@ -578,10 +593,12 @@ nav {
 .see_more button:hover {
     background-color: #043459;
 }
+
 /* STYLES CART MORE INFORMATION*/
 .more_information {
     position: absolute;
     top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -631,9 +648,11 @@ nav {
     text-align: center;
     font-size: 16px;
     color: #254453;
-    height: 100%;
+    height: fit-content;
+    width: 70%;
     border-radius: 5px;
     margin: 0;
+    padding: 0.5rem;
     font-weight: bold;
     text-align: center;
     background-color: #fff8dc;
@@ -653,8 +672,10 @@ nav {
     cursor: pointer;
     color: #fff8dc;
     font-weight: bold;
-    height: 100%;
+    width: 30%;
+    height: fit-content;
     background-color: #254453;
+    border: 1px solid #FFF8dc;
 }
 
 .travel_price_back {
@@ -672,6 +693,8 @@ nav {
 }
 
 .travel_price_back p {
+    font-weight: bold;
+    font-size: 17px;
     color: #13236b;
 }
 
@@ -683,25 +706,26 @@ nav {
     height: 45vh;
     display: flex;
     margin-top: 20px;
-  }
-  
- .map_footer {
+}
+
+.map_footer {
     border-radius: 20px;
     width: 80%;
     height: 80%;
-  }
-  
-  .contain_map_footer {
+}
+
+.contain_map_footer {
     width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .section_info_footer {
+}
+
+.section_info_footer {
     width: 60%;
-  }
-  .column_info_footer {
+}
+
+.column_info_footer {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -709,44 +733,44 @@ nav {
     padding-bottom: 10px;
     width: 100%;
     height: 100%;
-  }
-  
-  .info_contact,
-  .info_adress {
+}
+
+.info_contact,
+.info_adress {
     width: fit-content;
     padding: 30px;
     font-size: 20px;
     font-family: var(--font-family-title);
     list-style: none;
     height: 100%;
-  }
-  
-  .contain_info_adress {
+}
+
+.contain_info_adress {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-  }
-  
-  .info_contact ul,
-  .info_adress ul {
+}
+
+.info_contact ul,
+.info_adress ul {
     list-style: none;
     color: var(--beige-);
     font-weight: bold;
-  }
-  
-  .info_contact ul li,
-  .info_adress ul li {
+}
+
+.info_contact ul li,
+.info_adress ul li {
     padding: 5px;
-  }
-  
-  .info_contact ul li:hover,
-  .info_adress ul li:hover {
+}
+
+.info_contact ul li:hover,
+.info_adress ul li:hover {
     color: white;
-  }
-  
-  .social_media_footer {
+}
+
+.social_media_footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -754,9 +778,9 @@ nav {
     font-size: 10px;
     font-family: var(--font-family-title);
     color: var(--beige-);
-  }
-  
-  .social_media_footer svg {
+}
+
+.social_media_footer svg {
     height: 50px;
     width: 50px;
     margin: 10px;
@@ -786,77 +810,35 @@ nav {
 /* dashboard */
 @media screen and (min-width: 600px) and (max-width: 920px) {
     .section_dashHero {
-      height: 80vh;
+        height: 80vh;
     }
+
     .article_img {
-      flex: 0 0 calc(100% / 1);
+        flex: 0 0 calc(100% / 1);
     }
-  }
-  /* ------------------------- mobile -----*/
-  
-@media screen and (max-width: 599px) {
-    .section_dashHero {
-      height: 70vh;
-    }
-    .menu_dashHero h2 {
-      font-size: 13px;
-    }
-  }
-
-/* Media query para pantallas entre 1162px y 1920px */
-@media screen and (min-width: 1550px) and (max-width: 1920px) {
-    .P_section_highlights {
-        gap: 2rem;
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
-
-    .travel_name {
-        width: 100%;
-        font-size: 1.1rem;
-    }
-
-    .travel_opinions {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        text-align: left;
-        font-size: 16px;
-        color: #254453;
-    }
-
-    .button_price {
-        width: 45%;
-        transform: translateY(1%);
-        font-size: 1rem;
-        right: 3%;
-        padding: 0.1rem;
-    }
-
-    .contain_add_booking h3 {
-        width: 55%;
-        font-size: 1rem;
-    }
-
-    .contain_add_booking button {
-        font-size: 0.8rem;
-        width: 42%;
-        text-align: center;
-    }
-
-    .see_more button {
-        padding: 1rem;
-    }
-
-    
 }
 
+/* ------------------------- mobile -----*/
+
+@media screen and (max-width: 599px) {
+    .section_dashHero {
+        height: 70vh;
+    }
+
+    .menu_dashHero h2 {
+        font-size: 13px;
+    }
+}
+
+/* Media query para pantallas entre 1162px y 1920px */
+
+
 @media screen and (min-width: 1182px) and (max-width: 1549px) {
-    #card1{
+    #card1 {
         display: none;
     }
 
-    #card2{
+    #card2 {
         display: none;
     }
 }
@@ -911,142 +893,343 @@ nav {
         width: 35%;
     }
 
-    #card1{
+    #card1 {
         display: none;
     }
 
-    #card2{
+    #card2 {
         display: none;
     }
 }
+
 /* Finish juan_pablo */
- 
+/*---------dahsboard admin samuel----------*/
+.section_dashboard_admin {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.menu_dash_admin {
+    background-color: var(--blue-);
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+.menu_dash_admin div {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_dash_admin div svg {
+    color: white;
+    height: 100px;
+    width: fit-content;
+}
+
+.menu_dash_admin button {
+    padding: 5px;
+    width: 120px;
+    height: 150px;
+    background-color: var(--blue-);
+    color: white;
+    border: none;
+    text-align: left;
+
+}
+
+.menu_dash_admin button:hover {
+    border-left: solid 2px white;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #4f6772;
+}
+
+.menu_dash_admin h3 {
+    text-align: left;
+    color: white;
+    padding: 10px 10px 10px 0px;
+}
+
+/* ------ targets description dashboard admin -----*/
+.place_dashboard_contain {
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+.section_description_targets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.table_stadistics {
+    height: 500px;
+    width: 80%;
+    border: #254453 solid 1px;
+    border-radius: 20px;
+    background-image: url(./img/Imagen1.png);
+    background-size: cover;
+}
+
+.button_table_stadistics {
+    background-color: var(--blue-);
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    color: var(--white-);
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.button_table_stadistics:hover {
+    font-weight: bold;
+    color: var(--blue-);
+    background-color: var(--white-);
+    border-color: var(--blue-) 1px solid;
+    cursor: pointer;
+}
+
+/* ------ targets description dashboard admin -----*/
+
+.target_description_dash {
+    display: flex;
+    height: 30vh;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.img_target_description {
+    width: 30%;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    background-image: url(./img/towe_eifel\ \(1\).jpg);
+    background-size: cover;
+
+}
+
+.contain_text_description {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue-);
+    border-radius: 0px 10px 10px 00px;
+}
+
+.title_tour_description {
+    width: 80%;
+    background-color: var(--beige-);
+    border-radius: 10px;
+    padding: 5px;
+    color: var(--blue-);
+    text-align: center;
+}
+
+.text_description_target p {
+    font-size: 15px;
+    color: var(--beige-);
+}
+
+.contain_characteristic_target {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: solid 1px #fff8dc;
+}
+
+.contain_characteristic_target p {
+    width: 25%;
+    height: fit-content;
+    padding: 5px;
+    text-align: center;
+    color: var(--beige-);
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.border_target_char {
+    border-right: solid 1px #fff8dc;
+}
+
 /*Start Alejandro */
-@media screen and (max-width: 1180px){
-    #arrow{
+@media screen and (max-width: 1180px) {
+    #arrow {
         display: none;
     }
 
-    #searchWhitInputUser{
+    #searchWhitInputUser {
         text-align: center;
     }
 }
 
-@media screen and (max-width: 990px){
-    #places{
-        display: grid;
-        justify-content: center;
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 70px;
-        gap: 1rem;
-    }
-
-    #places h2{
-        color: #FFF8DC;
-        font-size: 170%;
-        margin-left: 3%;
-        
-    }
-
-    #places #c_1{
-        grid-column: 1fr;
-        grid-row: 1/4;
-    }
-    
-    #places #c_2{
-        grid-column: 1fr;
-        grid-row: 1/4;
-    }
-    
-    #places #c_3{
-        grid-column: auto;
-        grid-row: 4/7;
-    }
-    
-    #places #c_4{
-        grid-column: auto;
-        grid-row: 4/7;
-    }
-    
-    #places #c_5{
-        grid-column: auto;
-        grid-row: 7/10;
-    }
-
-    #places #c_6{
-        grid-column: auto;
-        grid-row: 7/10;
-    }
-    
-    #places #c_7{
-        display: none;
-    }
-    
-    .mainDestinations #searchBar{
-        display: flex;
-        align-items: center; 
-        flex-direction: column;
-       
-    }
-
-    #searchBar #inputUser{
-        background-color: #FFF8DC;
-        width: 40%;
-        border-radius: 5px;
-        text-align: center;
-        margin-right: 1%;
-        padding: 1.3%;
-        border: solid 0px;
-        box-shadow: 2px 2px 2px 0px;
-        outline: none;
-        margin-bottom: 1%;
-    }
-    
-     ::placeholder{
-        font-size: 0.8rem;
-        font-style: italic;
-        color: #183543;
-    } 
-
-    #searchWhitInputUser{
-        background-color: #254453;
-        color: #FFF8DC;
-        border-radius: 5px;
-        width: 16%;
-        text-align: center;
-        font-family: "Roboto", sans-serif;
-        box-shadow: 0px 2px 2px 0px;
-        padding: 0.5rem;
-    }
-}
+@media screen and (max-width: 1024px) {}
 
 /* footer responsive */
 @media screen and (max-width: 599px) {
     .footer_home {
-      height: 30vh;
+        height: 30vh;
     }
+
     .info_contact,
     .info_adress {
-      font-size: 10px;
+        font-size: 10px;
     }
+
     .social_media_footer svg {
-      height: 20px;
-      width: 20px;
-      margin: 5px;
+        height: 20px;
+        width: 20px;
+        margin: 5px;
     }
+
     .info_contact,
     .info_adress {
-      padding: 10px;
+        padding: 10px;
     }
-  }
+
+    /* --------------------------section dashboard----------- */
 
 
-  /* ------------ tablet-----*/
-@media screen and (min-width: 600px) and (max-width: 920px) {
+    .menu_dash_admin {
+        justify-content: flex-start;
+        align-items: ;
+
+        padding: 5px;
+    }
+
+    .menu_dash_admin button {
+        font-size: 9px;
+        width: 100%;
+        height: 40px;
+    }
+
+    .menu_dash_admin h3 {
+        padding: 0px;
+        width: 100%;
+        font-size: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .menu_dash_admin div {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .menu_dash_admin div svg {
+        height: 50px;
+    }
+
+    .menu_dash_admin div {
+        margin-bottom: 10px;
+    }
+
+
+
+    .place_dashboard_contain {
+        padding: 10px;
+    }
+
+    .table_stadistics {
+        height: 30vh;
+    }
+
+    .contain_text_description {
+        height: 100%;
+        padding: 5px;
+        width: 100%;
+        gap: 10px;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .img_target_description {
+
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .target_description_dash {
+        flex-direction: column;
+        height: 300px;
+    }
+
+    .target_description_dash p {
+        font-size: 10px;
+    }
+
+    .contain_characteristic_target {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .border_target_char {
+        border: 0px;
+    }
+
+}
+
+/* ------------ tablet-----*/
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
     .social_media_footer svg {
-      margin: 3px;
+        margin: 3px;
     }
+
     .article_img {
-      flex: 0 0 calc(100% / 1);
+        flex: 0 0 calc(100% / 1);
     }
-  }
+
+    .menu_dash_admin {
+        padding: 0px;
+        align-items: center;
+    }
+
+    .menu_dash_admin h3 {
+        text-align: center;
+    }
+
+    .menu_dash_admin div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu_dash_admin div button {
+        text-align: center;
+        height: 50px !important;
+        font-size: 20px;
+    }
+
+    .target_description_dash {
+        height: 300px;
+    }
+}
